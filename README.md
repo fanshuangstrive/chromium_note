@@ -6,8 +6,6 @@ chrominum net
 
 GQUIC
 
-
-
 Chromium 源码检索： https://cs.chromium.org/chromium/src/
 
 ####  Chromium Cronet 
@@ -29,8 +27,6 @@ android 示例代码 https://chromium.googlesource.com/chromium/src/+/refs/heads
 编译ios 库（Mac）：https://github.com/chromium/chromium/blob/master/docs/mac_build_instructions.md
 
 ios 示例代码：https://chromium.googlesource.com/chromium/src/+/refs/heads/master/components/cronet/ios/
-
-#### 
 
 ------
 
