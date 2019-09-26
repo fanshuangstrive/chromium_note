@@ -172,7 +172,7 @@ ninja -C out/Default net:epoll_quic_client
 ninja -C out/Default net:epoll_quic_server
 
 #方式一 cache: quic_server epoll_quic_server
-10.16.59.213
+
 cd /home/fanshuang/cronet
 mkdir quic-data
 cd quic-data
