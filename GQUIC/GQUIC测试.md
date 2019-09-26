@@ -35,7 +35,7 @@ Chrome浏览器查看上传文件：https://quic.com/upload/
 # net/tools/quic/certs/
 # --key_file pkcs8密钥
 #  --v=1 打印详细日志
-nohup ./quic_server --quic_proxy_backend_url=http://127.0.0.1:25080 --certificate_file=./y.play.360kan.com.crt --key_file=./y.play.360kan.com.pkcs8 --port=443 -mode=proxy &
+nohup ./quic_server --quic_proxy_backend_url=http://127.0.0.1:25080 --certificate_file=./quic.com.crt --key_file=./quic.com.pkcs8 --port=443 -mode=proxy &
 ```
 
 ```sh
@@ -43,8 +43,8 @@ openssl pkcs8 \
   -topk8 \
   -outform DER \
   -inform PEM \
-  -in ./y.play.360kan.com.key \
-  -out ./y.play.360kan.com.pkcs8 \
+  -in ./qui c.com.key \
+  -out ./quic.com.pkcs8 \
   -nocrypt
 ```
 
