@@ -3,11 +3,10 @@
 
 测试QUIC版本：Q043、Q039 
 host配置 
-  10.208.136.228  app.v.k.360kan.com
-  y.play.360kan.com
+  192.168.1.228  quic.com
 
-Chrome浏览器测试上传文件地址：https://app.v.k.360kan.com/upload.html   
-Chrome浏览器查看上传文件：https://app.v.k.360kan.com/upload/ 
+Chrome浏览器测试上传文件地址：https://quic.com/upload.html   
+Chrome浏览器查看上传文件：https://quic.com/upload/ 
 
 # Chrome浏览器启用quic
 
@@ -24,13 +23,13 @@ Chrome浏览器查看上传文件：https://app.v.k.360kan.com/upload/
 
 ## GQUIC UDP 443
 
-方式一、kquic  10.208.136.228 
+方式一、quic-go example
 
 ```sh
-kquic proxy start
+
 ```
 
-方式二、chromium quic_server  10.173.125.17  要求：CentOS 7
+方式二、chromium quic_server    要求：CentOS 7
 
 ```sh
 # net/tools/quic/certs/
@@ -74,6 +73,11 @@ php-fpm -R  --daemonize #Allow pool to run as root (disabled by default)
 $netstat -anp | grep 443
 tcp 0 0 0.0.0.0:443 0.0.0.0:* LISTEN 5599/nginx
 tcp 0 0 :::443 :::* LISTEN 5599/nginx
-udp 0 0 :::443 :::* 13653/kquic
+udp 0 0 :::443 :::* 13653/
 $
+
+#抓包
+tcpdump -i any port 443 -xx -Xs 0 
+
 ```
+
